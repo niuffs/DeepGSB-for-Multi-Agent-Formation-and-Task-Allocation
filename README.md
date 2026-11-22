@@ -10,7 +10,7 @@
   <a href="code/"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c" alt="Code"></a>
 </p>
 
-<p align="center">📄 <a href="main.pdf">Paper (PDF)</a> · 📎 <a href="Appendix.pdf">Appendix</a> · 💻 <a href="code/">Code</a> · 🖼 <a href="figures/">Figures</a></p>
+<p align="center">📄 <a href="main.pdf">Paper (PDF)</a> · 📌 <a href="poster_2026-2450.pdf">Poster (PDF)</a> · 📎 <a href="Appendix.pdf">Appendix</a> · 💻 <a href="code/">Code</a> · 🖼 <a href="figures/">Figures</a></p>
 
 ---
 
@@ -284,6 +284,7 @@ Use `python plot_trajectory.py --help` for the comparison, formation, and format
 - **Venue:** ACML 2026, Journal Track
 - **Paper ID:** 2026-2450
 - **PDF:** [`main.pdf`](main.pdf) · **Appendix:** [`Appendix.pdf`](Appendix.pdf)
+- **Poster:** [`poster_2026-2450.pdf`](poster_2026-2450.pdf)
 
 ### ACML 2026 Presentation
 
