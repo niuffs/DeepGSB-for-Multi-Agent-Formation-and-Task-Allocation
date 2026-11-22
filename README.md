@@ -1,20 +1,16 @@
-<div align="center">
+<h1 align="center">DeepGSB for Multi-Agent Formation and Task Allocation</h1>
 
-# DeepGSB for Multi-Agent Formation and Task Allocation
+<p align="center"><strong>ACML 2026 · Journal Track · Paper ID 2026-2450</strong></p>
 
-**ACML 2026 · Journal Track · Paper ID 2026-2450**
+<p align="center">Feng Liu, Faguo Wu*, Xiao Zhang*<br>Beihang University</p>
 
-Feng Liu, Faguo Wu\*, Xiao Zhang\*
+<p align="center">
+  <a href="https://www.acml-conf.org/2026/program/"><img src="https://img.shields.io/badge/ACML-2026-Journal%20Track-1f4e79" alt="ACML 2026"></a>
+  <a href="main.pdf"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b" alt="Paper"></a>
+  <a href="code/"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c" alt="Code"></a>
+</p>
 
-Beihang University
-
-[![ACML 2026](https://img.shields.io/badge/ACML-2026-Journal%20Track-1f4e79)](https://www.acml-conf.org/2026/program/)
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](main.pdf)
-[![Python](https://img.shields.io/badge/Code-PyTorch-ee4c2c)](code/)
-
-📄 [Paper (PDF)](main.pdf) · 📎 [Appendix](Appendix.pdf) · 💻 [Code](code/) · 🖼 [Figures](figures/)
-
-</div>
+<p align="center">📄 <a href="main.pdf">Paper (PDF)</a> · 📎 <a href="Appendix.pdf">Appendix</a> · 💻 <a href="code/">Code</a> · 🖼 <a href="figures/">Figures</a></p>
 
 ---
 
@@ -84,9 +80,9 @@ gray disks are obstacles.
 
 5. **PF-ODE for smooth multi-agent control.** The forward SDE is noisy and the naive
    optimal-control ODE causes congestion and collisions. We propose the probability flow ODE
-   $$v_p=\frac{1}{2}(v_f-v_b)=v^*-\frac{1}{2}\sigma^2\nabla\log\rho,$$
-   fine-tune the initial positions to hit prescribed terminal targets, and obtain deterministic,
-   continuous, reversible trajectories for formation transformation and task allocation.
+   $v_p=\tfrac{1}{2}(v_f-v_b)=v^*-\tfrac{1}{2}\sigma^2\nabla\log\rho$, fine-tune the initial
+   positions to hit prescribed terminal targets, and obtain deterministic, continuous, reversible
+   trajectories for formation transformation and task allocation.
 
 ---
 
