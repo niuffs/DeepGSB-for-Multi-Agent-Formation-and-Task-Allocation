@@ -5,9 +5,9 @@
 <p align="center">Feng Liu, Faguo Wu*, Xiao Zhang*<br>Beihang University</p>
 
 <p align="center">
-  <a href="https://www.acml-conf.org/2026/program/"><img src="https://img.shields.io/badge/ACML-2026-Journal%20Track-1f4e79" alt="ACML 2026"></a>
-  <a href="main.pdf"><img src="https://img.shields.io/badge/Paper-PDF-b31b1b" alt="Paper"></a>
-  <a href="code/"><img src="https://img.shields.io/badge/Code-PyTorch-ee4c2c" alt="Code"></a>
+  <a href="https://www.acml-conf.org/2026/program/"><img src="https://img.shields.io/static/v1?label=ACML&message=2026%20Journal%20Track&color=1f4e79" alt="ACML 2026 Journal Track"></a>
+  <a href="main.pdf"><img src="https://img.shields.io/static/v1?label=Paper&message=PDF&color=b31b1b" alt="Paper"></a>
+  <a href="code/"><img src="https://img.shields.io/static/v1?label=Code&message=PyTorch&color=ee4c2c" alt="Code"></a>
 </p>
 
 <p align="center">📄 <a href="main.pdf">Paper (PDF)</a> · 📌 <a href="poster_2026-2450.pdf">Poster (PDF)</a> · 📎 <a href="Appendix.pdf">Appendix</a> · 💻 <a href="code/">Code</a> · 🖼 <a href="figures/">Figures</a></p>
