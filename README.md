@@ -23,8 +23,9 @@ system** of **mean-field games (MFGs)**: the backward HJB equation describes eac
 action, while the forward FP equation governs the evolution of the population density. The two are
 bidirectionally coupled, which is the central difficulty of the problem.
 
-This paper builds **four challenging high-dimensional MFG benchmarks** with complex, multi-modal
-terminal distributions and obstacles, and systematically compares the three families of solvers:
+This paper builds **four challenging MFG benchmarks** with complex, multi-modal terminal
+distributions and obstacles, spanning 2–50 dimensions, and systematically compares the three
+families of solvers:
 
 | Family | Representative | Core idea |
 |---|---|---|
@@ -105,7 +106,7 @@ coupled HJB–FP system  ──Hopf–Cole──▶  (Ψ, Ψ̂) PDEs  ──Feyn
 - Forward and backward networks are trained **alternately with crossed sampling**, reusing
   trajectories off-policy instead of re-simulating at every iteration.
 - The PF-ODE is simulated per agent and its initial states are optimized so that terminal
-  positions match the assigned targets (Eq. (correction) in the paper).
+  positions match the assigned targets (the position-correction step in the paper).
 
 ---
 
@@ -169,7 +170,7 @@ produces smooth, separated, continuous trajectories suitable for real swarm cont
 
 ### Quantitative comparison (Gauss2Gauss_Obs3, N = 500 agents, mean ± std over 5 runs)
 
-Lower is better for every cost. Best value per column in **bold**.
+Lower is better for every cost. Best value **per dimension** in bold.
 
 | Method | d | C<sub>total</sub> | C<sub>run</sub> | C<sub>cong</sub> | C<sub>obs</sub> | C<sub>term</sub> |
 |---|---:|---:|---:|---:|---:|---:|
@@ -183,9 +184,9 @@ Lower is better for every cost. Best value per column in **bold**.
 **Reading the table.** DeepGSB attains the **lowest congestion cost** at both dimensions and the
 **lowest terminal cost at d = 20** — the two terms that matter for formation quality and safety.
 MFG-Net has a lower total cost on this *single-target* problem, but it cannot cover multi-modal
-targets at all; its advantage does not transfer to task allocation. PINN drives the obstacle cost
-to zero at d = 20 only by collapsing the swarm onto overlapping paths, as its high congestion cost
-shows.
+targets at all; its advantage does not transfer to task allocation. PINN reaches zero obstacle cost
+at d = 20 while leaving a terminal cost of 0.5 and the highest congestion cost of the three
+methods — the swarm overlaps and collides instead of matching the target distribution.
 
 ### Training behavior
 
@@ -199,16 +200,16 @@ shows.
   <img src="figures/Gauss2Gauss_Obs3_d50_cost_curves.png" width="95%" alt="Evaluation cost over time">
 </p>
 <p align="center"><em>
-Evaluation costs along the controlled trajectory at d = 50: running, congestion, and obstacle
-costs all stay low and balanced over the whole horizon.
+Evaluation costs along the controlled trajectory at d = 50. Congestion is lowest mid-horizon, and
+the obstacle cost rises only while agents pass the obstacles before returning to zero.
 </em></p>
 
 ---
 
 ## Conclusions
 
-- PINN's failure on coupled HJB–FP systems is structural, not a tuning issue: residual failure and
-  magnitude imbalance persist across initializations and loss rescalings.
+- PINN's failure on coupled HJB–FP systems is structural rather than a matter of loss tuning:
+  residual failure and magnitude imbalance are properties of the coupled system itself.
 - MFG-Net's continuity constraint is a representational ceiling: it cannot split mass from a
   unimodal source to multi-modal targets, so single-mode collapse is unavoidable on these tasks.
 - DeepGSB's FBSDE drift terms provide well-scaled, distribution-guided supervision, and its
@@ -286,20 +287,20 @@ Use `python plot_trajectory.py --help` for the comparison, formation, and format
 
 | | |
 |---|---|
-| **Poster** | Thu 2:30–4:00 PM · **Poster 5** |
-| **Oral** | Thu 4:30–6:00 PM · **Oral 5C**, Room 3 |
+| **Poster** | Thu 2:30–4:00 · **Poster 5** |
+| **Oral** | Thu 4:30–6:00 · **Oral 5C**, Room 3 |
 | **Session** | Structured Reasoning and Multi-Agent Systems |
 | **Program** | <https://www.acml-conf.org/2026/program/> |
 
 ### Citation
 
 ```bibtex
-@inproceedings{liu2026deepgsb,
-  title     = {DeepGSB for Multi-Agent Formation and Task Allocation},
-  author    = {Liu, Feng and Wu, Faguo and Zhang, Xiao},
-  booktitle = {Proceedings of the Asian Conference on Machine Learning (ACML)},
-  year      = {2026},
-  note      = {Journal Track, Paper ID 2026-2450}
+@misc{liu2026deepgsb,
+  title        = {DeepGSB for Multi-Agent Formation and Task Allocation},
+  author       = {Liu, Feng and Wu, Faguo and Zhang, Xiao},
+  year         = {2026},
+  note         = {Asian Conference on Machine Learning (ACML 2026), Journal Track, Paper ID 2026-2450},
+  howpublished = {\url{https://github.com/niuffs/DeepGSB-for-Multi-Agent-Formation-and-Task-Allocation}}
 }
 ```
 
