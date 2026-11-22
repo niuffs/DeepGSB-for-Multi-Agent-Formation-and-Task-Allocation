@@ -257,7 +257,7 @@ bash run_experiments.sh          # all four problems, all dimensions
 Baselines follow the same pattern:
 
 ```bash
-cd code/MFG-Net && bash run_experiments.sh
+cd code/MFG-Net && DEVICE=cuda:0 bash run_experiments.sh
 cd code/PINN    && bash run_experiments.sh
 ```
 
@@ -308,8 +308,8 @@ Use `python plot_trajectory.py --help` for the comparison, formation, and format
 
 ## Contact
 
-Feng Liu — Liu_Feng@buaa.edu.cn
-Faguo Wu (corresponding) — faguo@buaa.edu.cn
+Feng Liu — Liu_Feng@buaa.edu.cn<br>
+Faguo Wu (corresponding) — faguo@buaa.edu.cn<br>
 Xiao Zhang (corresponding) — xiao.zh@buaa.edu.cn
 
 School of Artificial Intelligence, Beihang University, Beijing, China.
